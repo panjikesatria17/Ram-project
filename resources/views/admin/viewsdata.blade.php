@@ -3,6 +3,11 @@
 @push('css')
     <!-- Layout config Js -->
     <script src="{{ asset('template/assets/js/layout.js') }}"></script>
+    <!-- jsvectormap css -->
+    <link href="{{ asset('template/assets/libs/jsvectormap/css/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <!--Swiper slider css-->
+    <link href="{{ asset('template/assets/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" />
 @endpush
 @include('admin.layouts-admin.sidebar')
 @section('page-title','views Data Nasabah')
@@ -10,210 +15,320 @@
 @section('content')
 <div class="main-content">
 
-            <div class="row justify-content">
+            <div class="row justify-contentgit">
                 <div class="col-xxl-10">
                     <div class="card" id="demo">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="card-header border-bottom-dashed p-4">
                                     <div class="d-flex">
+                                        @foreach ($data as $row)
                                         <div class="flex-grow-1">
-                                            <img src="{{ asset('template/assets/images/logo-dark.png') }}" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                                            <img src="{{ asset('template/assets/images/logo-light.png') }}" class="card-logo card-logo-light" alt="logo light" height="17">
-                                            <div class="mt-sm-5 mt-4">
-                                                <h6 class="text-muted text-uppercase fw-semibold">Address</h6>
-                                                <p class="text-muted mb-1" id="address-details">California, United States</p>
-                                                <p class="text-muted mb-0" id="zip-code"><span>Zip-code:</span> 90201</p>
-                                            </div>
-                                        </div>
-                                        <div class="flex-shrink-0 mt-sm-0 mt-3">
-                                            <h6><span class="text-muted fw-normal">Legal Registration No:</span><span id="legal-register-no">987654</span></h6>
-                                            <h6><span class="text-muted fw-normal">Email:</span><span id="email">velzon@themesbrand.com</span></h6>
-                                            <h6><span class="text-muted fw-normal">Website:</span> <a href="https://themesbrand.com/" class="link-primary" target="_blank" id="website">www.themesbrand.com</a></h6>
-                                            <h6 class="mb-0"><span class="text-muted fw-normal">Contact No: </span><span id="contact-no"> +(01) 234 6789</span></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end card-header-->
-                            </div><!--end col-->
-                            <div class="col-lg-12">
-                                <div class="card-body p-4">
-                                    <div class="row g-3">
-                                        <div class="col-lg-3 col-6">
-                                            <p class="text-muted mb-2 text-uppercase fw-semibold fs-13">Card Number</p>
-                                            <h5 class="fs-15 mb-0">#VL<span id="invoice-no">25000355</span></h5>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-6">
-                                            <p class="text-muted mb-2 text-uppercase fw-semibold fs-13">Date</p>
-                                            <h5 class="fs-15 mb-0"><span id="invoice-date">23 Nov, 2021</span> <small class="text-muted" id="invoice-time">02:36PM</small></h5>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-6">
-                                            <p class="text-muted mb-2 text-uppercase fw-semibold fs-13">Payment Status</p>
-                                            <span class="badge badge-soft-success fs-12" id="payment-status">Paid</span>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-lg-3 col-6">
-                                            <p class="text-muted mb-2 text-uppercase fw-semibold fs-13">Total Amount</p>
-                                            <h5 class="fs-15 mb-0">$<span id="total-amount">415.96</span></h5>
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
-                                </div>
-                                <!--end card-body-->
-                            </div><!--end col-->
-                            <div class="col-lg-12">
-                                <div class="card-body p-4 border-top border-top-dashed">
-                                    <div class="row g-3">
-                                        <div class="col-3">
-                                            <h6 class="text-muted text-uppercase fw-semibold mb-3 fs-13">Billing Address</h6>
-                                            <p class="fw-medium mb-2" id="billing-name">David Nichols</p>
-                                            <p class="text-muted mb-1" id="billing-address-line-1">305 S San Gabriel Blvd</p>
-                                            <p class="text-muted mb-1"><span>Phone: +</span><span id="billing-phone-no">(123) 456-7890</span></p>
-                                            <p class="text-muted mb-0"><span>Tax: </span><span id="billing-tax-no">12-3456789</span> </p>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-3">
-                                            <h6 class="text-muted text-uppercase fw-semibold mb-3 fs-13">Billing Address</h6>
-                                            <p class="fw-medium mb-2" id="billing-name">David Nichols</p>
-                                            <p class="text-muted mb-1" id="billing-address-line-1">305 S San Gabriel Blvd</p>
-                                            <p class="text-muted mb-1"><span>Phone: +</span><span id="billing-phone-no">(123) 456-7890</span></p>
-                                            <p class="text-muted mb-0"><span>Tax: </span><span id="billing-tax-no">12-3456789</span> </p>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-3">
-                                            <h6 class="text-muted text-uppercase fw-semibold mb-3 fs-13">Billing Address</h6>
-                                            <p class="fw-medium mb-2" id="billing-name">David Nichols</p>
-                                            <p class="text-muted mb-1" id="billing-address-line-1">305 S San Gabriel Blvd</p>
-                                            <p class="text-muted mb-1"><span>Phone: +</span><span id="billing-phone-no">(123) 456-7890</span></p>
-                                            <p class="text-muted mb-0"><span>Tax: </span><span id="billing-tax-no">12-3456789</span> </p>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-3">
-                                            <h6 class="text-muted text-uppercase fw-semibold mb-3 fs-13">Billing Address</h6>
-                                            <p class="fw-medium mb-2" id="billing-name">David Nichols</p>
-                                            <p class="text-muted mb-1" id="billing-address-line-1">305 S San Gabriel Blvd</p>
-                                            <p class="text-muted mb-1"><span>Phone: +</span><span id="billing-phone-no">(123) 456-7890</span></p>
-                                            <p class="text-muted mb-0"><span>Tax: </span><span id="billing-tax-no">12-3456789</span> </p>
-                                        </div>
-                                        <!--end col-->
-                                        </div>
-                                    </div>
-                                    <!--end row-->
-                                </div>
-                                <!--end card-body-->
-                            </div><!--end col-->
-                
-                            <div class="col-lg-12">
-                                <div class="card-body p-4">
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless text-center table-nowrap align-middle mb-0">
-                                            <thead>
-                                                <tr class="table-active">
-                                                    <th scope="col" style="width: 50px;">#</th>
-                                                    <th scope="col">Product Details</th>
-                                                    <th scope="col">Rate</th>
-                                                    <th scope="col">Quantity</th>
-                                                    <th scope="col" class="text-end">Amount</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="products-list">
-                                                <tr>
-                                                    <th scope="row">01</th>
-                                                    <td class="text-start">
-                                                        <span class="fw-medium">Sweatshirt for Men (Pink)</span>
-                                                        <p class="text-muted mb-0">Graphic Print Men & Women Sweatshirt</p>
-                                                    </td>
-                                                    <td>$119.99</td>
-                                                    <td>02</td>
-                                                    <td class="text-end">$239.98</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">02</th>
-                                                    <td class="text-start">
-                                                        <span class="fw-medium">Noise NoiseFit Endure Smart Watch</span>
-                                                        <p class="text-muted mb-0">32.5mm (1.28 Inch) TFT Color Touch Display</p>
-                                                    </td>
-                                                    <td>$94.99</td>
-                                                    <td>01</td>
-                                                    <td class="text-end">$94.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">03</th>
-                                                    <td class="text-start">
-                                                        <span class="fw-medium">350 ml Glass Grocery Container</span>
-                                                        <p class="text-muted mb-0">Glass Grocery Container (Pack of 3, White)</p>
-                                                    </td>
-                                                    <td>$24.99</td>
-                                                    <td>01</td>
-                                                    <td class="text-end">$24.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">04</th>
-                                                    <td class="text-start">
-                                                        <span class="fw-medium">Fabric Dual Tone Living Room Chair</span>
-                                                        <p class="text-muted mb-0">Chair (White)</p>
-                                                    </td>
-                                                    <td>$340.00</td>
-                                                    <td>01</td>
-                                                    <td class="text-end">$340.00</td>
-                                                </tr>
-                                            </tbody>
-                                        </table><!--end table-->
-                                    </div>
-                                    <div class="border-top border-top-dashed mt-2">
-                                        <table class="table table-borderless table-nowrap align-middle mb-0 ms-auto" style="width:250px">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Sub Total</td>
-                                                    <td class="text-end">$699.96</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Estimated Tax (12.5%)</td>
-                                                    <td class="text-end">$44.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Discount <small class="text-muted">(VELZON15)</small></td>
-                                                    <td class="text-end">- $53.99</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Shipping Charge</td>
-                                                    <td class="text-end">$65.00</td>
-                                                </tr>
-                                                <tr class="border-top border-top-dashed fs-15">
-                                                    <th scope="row">Total Amount</th>
-                                                    <th class="text-end">$755.96</th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="mt-3">
-                                        <h6 class="text-muted text-uppercase fw-semibold mb-3 fs-13">Payment Details:</h6>
-                                        <p class="text-muted mb-1">Payment Method: <span class="fw-medium" id="payment-method">Mastercard</span></p>
-                                        <p class="text-muted mb-1">Card Holder: <span class="fw-medium" id="card-holder-name">David Nichols</span></p>
-                                        <p class="text-muted mb-1">Card Number: <span class="fw-medium" id="card-number">xxx xxxx xxxx 1234</span></p>
-                                        <p class="text-muted">Total Amount: <span class="fw-medium" id="">$ </span><span id="card-total-amount">755.96</span></p>
-                                    </div>
-                                    <div class="mt-4">
-                                        <div class="alert alert-info">
-                                            <p class="mb-0"><span class="fw-semibold">NOTES:</span>
-                                                <span id="note">All accounts are to be paid within 7 days from receipt of invoice. To be paid by cheque or
-                                                    credit card or direct payment online. If account is not paid within 7
-                                                    days the credits details supplied as confirmation of work undertaken
-                                                    will be charged the agreed quoted fee noted above.
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="hstack gap-2 justify-content-end d-print-none mt-4">
-                                        <a href="javascript:window.print()" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Print</a>
-                                        <a href="javascript:void(0);" class="btn btn-primary"><i class="ri-download-2-line align-bottom me-1"></i> Download</a>
-                                    </div>
-                                </div>
-                                <!--end card-body-->
-                            </div><!--end col-->
+                                          <h4 class="fs-16 mb-1">Selamat Datang | {{ $row->user }} | {{ date('d F Y') }}</h4>
+
+                                        <div class="container mt-5">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-6">
+                                                  <div class="table-responsive">
+                                                      <table class="table">
+                                                          <thead class="table-light">
+                                                              <tr>
+                                                                <th colspan="2" class="text-center">Billing Information</th>
+                                                                </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td>Customer Name</td>
+                                                              <td>{{ $row->customer_name }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Tempat Lahir</td>
+                                                              <td>{{ $row->tempat_lahir }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Tanggal Lahir</td>
+                                                              <td>{{ $row->tgl_lahir }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Jenis Kelamin</td>
+                                                              <td>{{ $row->jenis_kelamin }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>No Loans</td>
+                                                              <td>{{ $row->no_loan }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Limit</td>
+                                                              <td>{{ $row->limit }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Balance</td>
+                                                              <td>{{ $row->balance }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Minimum Paid</td>
+                                                              <td>{{ $row->min_paid }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Type</td>
+                                                              <td>{{ $row->type }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Area</td>
+                                                              <td>{{ $row->area }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Open Date</td>
+                                                              <td>{{ $row->open_date }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Wo Date</td>
+                                                              <td>{{ $row->wo_date }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Last Paid Date</td>
+                                                              <td>{{ $row->last_payment_date }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Last Ammount Paid</td>
+                                                              <td>{{ $row->last_amount_paid }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Last Contact</td>
+                                                              <td>{{ $row->last_contak }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Asset Assignment</td>
+                                                              <td>{{ $row->created_at }}</td>
+                                                            </tr>
+                                                          </tbody>
+                                                          <!---next information-->                                                        
+                                                          <thead class="table-light mt-3">
+                                                            <tr>
+                                                              <th colspan="2" class="text-center">Hasil Pekerjaan</th>
+                                                              </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Total Action</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Last Action</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Total Payment </td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>LPD by User</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>LP Date BU</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Expired Status</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Est Saving Asset</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Contact Score</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Finance Score</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Closing Rate</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Total Payment </td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Recovery Rate</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                        </tbody>                                                           
+                                                        </table>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                  <th colspan="2" class="text-center">Billing Address</th>
+                                                                  </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <td>Alamat  </td>
+                                                                <td>{{ $row->alamat_rumah1 }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Alamat Lengkap</td>
+                                                                <td>{{ $row->alamat_rumah2 }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>-</td>
+                                                                <td>{{ $row->alamat_rumah3 }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Kelurahan</td>
+                                                                <td>{{ $row->kelurahan }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Kecamatan</td>
+                                                                <td>{{ $row->kecamatan }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Provinsi</td>
+                                                                <td>{{ $row->kota }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Kode Pos</td>
+                                                                <td>{{ $row->kode_pos }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Home Phone</td>
+                                                                <td>{{ $row->telp_rumah1 }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Mobile Phone</td>
+                                                                <td>{{ $row->mobile_phone1 }}</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td>Email</td>
+                                                                <td>{{ $row->email_customer }}</td>
+                                                              </tr>
+                                                            </tbody>
+                                                            <thead class="table-light mt-3">
+                                                              <tr>
+                                                                <th colspan="2" class="text-center">Emergency Contact</th>
+                                                                </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td>Nama Ibu</td>
+                                                              <td>{{ $row->nama_ibukandung }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Econ Name</td>
+                                                              <td>{{ $row->emergency_kontak }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Hubungan</td>
+                                                              <td>{{ $row->relation }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Home Phone</td>
+                                                              <td>{{ $row->econ_phone1 }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Mobile Phone</td>
+                                                              <td>{{ $row->econ_phone2 }}</td>
+                                                            </tr>
+                                                          </tbody>
+                                                          <thead class="table-light mt-3">
+                                                            <tr>
+                                                              <th colspan="2" class="text-center">Office Address</th>
+                                                              </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>Nama Perusahaan</td>
+                                                            <td>{{ $row->nama_perusahaan }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Alamat  </td>
+                                                            <td>{{ $row->alamat_kantor1 }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>-</td>
+                                                            <td>{{ $row->alamat_kantor2 }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>-</td>
+                                                            <td>{{ $row->alamat_kantor3 }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Kelurahan</td>
+                                                            <td>{{ $row->kelurahan_off }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Kecamatan</td>
+                                                            <td>{{ $row->kecamatan_off }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Kota</td>
+                                                            <td>{{ $row->kota_off }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Kode Pos</td>
+                                                            <td>{{ $row->kode_posoff }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Jabatan</td>
+                                                            <td>{{ $row->jabatan }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Nomor Telp 1</td>
+                                                            <td>{{ $row->office_phone1 }}</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Nomor Telp 2</td>
+                                                            <td>{{ $row->office_phone2 }}</td>
+                                                          </tr>
+                                                        </tbody>                                                            
+                                                          </table>
+                                                      </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                      <div class="table-responsive">
+                                                          <table class="table">
+                                                              <thead class="table-light">
+                                                                  <tr>
+                                                                  <th>Billing Information</th>
+                                                                  <th>Billing Information</th>
+                                                                  <th>Billing Information</th>
+                                                                  <th>Billing Information</th>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                      <div class="col-lg-6">
+                                                                        <select class="form-select mb-4" aria-label="Default select example">
+                                                                            <option selected>Select your Status </option>
+                                                                            <option value="1">Declined Payment</option>
+                                                                            <option value="2">Delivery Error</option>
+                                                                            <option value="3">Wrong Amount</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    </td>
+                                                                </tr>
+                                                              </tbody>
+                                                              <thead class="table-light">
+                                                                <tr>
+                                                                  <th>Billing Information</th>
+                                                                  <th>Billing Information</th>
+                                                                  <th>Billing Information</th>
+                                                                  <th>Billing Information</th>
+                                                                  </tr>
+                                                            </thead>                                                         
+                                                            </table>
+                                                        </div>
+                                                      </div>                                                           
+                                        @endforeach
+                                                                 
                         </div><!--end row-->
                     </div>
                     <!--end card-->
@@ -233,4 +348,16 @@
 @push('js')
      <!-- prismjs plugin -->
      <script src="{{ asset('template/assets/libs/prismjs/prism.js') }}"></script>
+      <!-- apexcharts -->
+    <script src="{{ asset('template/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+
+    <!-- Vector map-->
+    <script src="{{ asset('template/assets/libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
+    <script src="{{ asset('template/assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
+
+    <!--Swiper slider js-->
+    <script src="{{ asset('template/assets/libs/swiper/swiper-bundle.min.js') }}"></script>
+
+    <!-- Dashboard init -->
+    <script src="{{ asset('template/assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
 @endpush
