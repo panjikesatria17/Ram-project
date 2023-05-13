@@ -71,7 +71,7 @@ class DatanasabahSeeder extends Seeder
             'type_program' => 'null',
             'expired_status' => 'null',
             'update_payment' => 'null',
-            'coll1' => 'null',
+            'product' => 'BNI 46',
             'coll2' => 'null',
             'coll3' => 'null',
             'coll4' => 'null',

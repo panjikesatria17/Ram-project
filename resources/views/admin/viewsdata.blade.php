@@ -33,129 +33,89 @@
                                                       <table class="table">
                                                           <thead class="table-light">
                                                               <tr>
-                                                                <th colspan="2" class="text-center">Billing Information</th>
+                                                                <th colspan="2" class="text-center">{{ $row->customer_name }}</th>
                                                                 </tr>
                                                           </thead>
                                                           <tbody>
                                                             <tr>
-                                                              <td>Customer Name</td>
-                                                              <td>{{ $row->customer_name }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Tempat Lahir</td>
-                                                              <td>{{ $row->tempat_lahir }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Tanggal Lahir</td>
-                                                              <td>{{ $row->tgl_lahir }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Jenis Kelamin</td>
-                                                              <td>{{ $row->jenis_kelamin }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>No Loans</td>
-                                                              <td>{{ $row->no_loan }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Limit</td>
-                                                              <td>{{ $row->limit }}</td>
+                                                              <td>Product</td>
+                                                              <td>{{ $row->product }}</td>
                                                             </tr>
                                                             <tr>
                                                               <td>Balance</td>
                                                               <td>{{ $row->balance }}</td>
                                                             </tr>
                                                             <tr>
-                                                              <td>Minimum Paid</td>
-                                                              <td>{{ $row->min_paid }}</td>
+                                                              <td>Balance Category</td>
+                                                              <td>{{ $row->tgl_lahir }}</td>
                                                             </tr>
                                                             <tr>
-                                                              <td>Type</td>
-                                                              <td>{{ $row->type }}</td>
+                                                              <td>Customer Age</td>
+                                                              <td>{{ $row->jenis_kelamin }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Margin Open & Wo</td>
+                                                              <td>{{ $row->no_loan }}</td>
                                                             </tr>
                                                             <tr>
                                                               <td>Area</td>
                                                               <td>{{ $row->area }}</td>
                                                             </tr>
                                                             <tr>
-                                                              <td>Open Date</td>
-                                                              <td>{{ $row->open_date }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Wo Date</td>
-                                                              <td>{{ $row->wo_date }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Last Paid Date</td>
-                                                              <td>{{ $row->last_payment_date }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Last Ammount Paid</td>
-                                                              <td>{{ $row->last_amount_paid }}</td>
-                                                            </tr>
-                                                            <tr>
-                                                              <td>Last Contact</td>
+                                                              <td>Last Action</td>
                                                               <td>{{ $row->last_contak }}</td>
                                                             </tr>
                                                             <tr>
-                                                              <td>Asset Assignment</td>
-                                                              <td>{{ $row->created_at }}</td>
+                                                              <td>Pembayaran Terakhir</td>
+                                                              <td>{{ $row->last_amount_paid }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>Last Date Pembayaran</td>
+                                                              <td>{{ $row->last_payment_date }}</td>
                                                             </tr>
                                                           </tbody>
                                                           <!---next information-->                                                        
                                                           <thead class="table-light mt-3">
                                                             <tr>
-                                                              <th colspan="2" class="text-center">Hasil Pekerjaan</th>
+                                                              <th colspan="2" class="text-center"></th>
                                                               </tr>
                                                         </thead>
                                                         <tbody>
                                                           <tr>
-                                                            <td>Total Action</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Last Action</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Total Payment </td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>LPD by User</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>LP Date BU</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Expired Status</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Est Saving Asset</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Contact Score</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Finance Score</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Closing Rate</td>
-                                                            <td>null</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>Total Payment </td>
+                                                            <td>Tanggal Dibuat</td>
                                                             <td>null</td>
                                                           </tr>
                                                           <tr>
                                                             <td>Recovery Rate</td>
                                                             <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Total Saveing Asset</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Action Code</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Predoksi Bayar</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Tanggal Contact</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Contact Person</td>
+                                                            <td>null</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td>Input Massage</td>
+                                                            <td>
+                                                              <div class="mb-3">
+                                                              <textarea class="form-control" id="VertimeassageInput" rows="3" placeholder="Enter your message"></textarea>
+                                                          </div>
+                                                        </td>
                                                           </tr>
                                                         </tbody>                                                           
                                                         </table>

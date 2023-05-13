@@ -70,7 +70,7 @@ return new class extends Migration
             $table->string('type_program');
             $table->string('expired_status');
             $table->string('update_payment');
-            $table->string('coll1');
+            $table->string('product');
             $table->string('coll2');
             $table->string('coll3');
             $table->string('coll4');
