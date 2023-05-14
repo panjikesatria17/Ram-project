@@ -145,4 +145,24 @@ class DatanasabahController extends Controller
     {
         return view('agent.dashboard-agent');
     }
+
+    public function user()
+    {
+        return view('admin.user');
+    }
+
+    public function roles()
+    {
+        return view('admin.roles');
+    }
+
+    public function succes_rate()
+    {
+        return view('admin.succes_rate');
+    }
+
+    public function inventory_ratio()
+    {
+        return view('admin.inventory_ratio');
+    }
 }

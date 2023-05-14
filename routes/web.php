@@ -21,6 +21,11 @@ Route::get('/', function () {
 Route::get('/signin', [DatanasabahController::class, 'signin'])->name('signin');
 
 Route::get('/dashboardadmin', [DatanasabahController::class, 'dashboardadmin'])->name('dashboardadmin');
+Route::get('/user', [DatanasabahController::class, 'user'])->name('user');
+Route::get('/roles', [DatanasabahController::class, 'roles'])->name('roles');
+Route::get('/succes_rate', [DatanasabahController::class, 'succes_rate'])->name('succes_rate');
+Route::get('/inventory_ratio', [DatanasabahController::class, 'inventory_ratio'])->name('inventory_ratio');
+
 
 Route::get('/datanasabah', [DatanasabahController::class, 'index'])->name('datanasabah');
 

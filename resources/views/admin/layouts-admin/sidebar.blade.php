@@ -44,19 +44,19 @@
                                 <a href="/dashboardadmin" target="_self" class="nav-link" data-key="t-vertical">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-analytics"> User</a>
+                                <a href="/user" class="nav-link" data-key="t-analytics"> User</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-crm"> Roles </a>
+                                <a href="/roles" class="nav-link" data-key="t-crm"> Roles </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-ecommerce"> Succes Rate </a>
+                                <a href="/succes_rate" class="nav-link" data-key="t-ecommerce"> Succes Rate </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-crypto"> KPI Rate </a>
+                                <a href="/inventory_ratio" class="nav-link" data-key="t-crypto"> KPI Rate </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link" data-key="t-crypto"> Rencana Kerja</a>
+                                <a href="/inventory_ratio" class="nav-link" data-key="t-crypto"> Rencana Kerja</a>
                             </li>
                         </ul>
                     </div>
