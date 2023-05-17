@@ -47,8 +47,8 @@
     <div class="container-fluid bg-success text-white d-none d-lg-flex">
         <div class="container py-2">
             <div class="d-flex align-items-center">
-                <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@example.com</small>
-                <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</small>
+                <small class="ms-4"><i class="fa fa-envelope me-3"></i>info@gaptech.com</small>
+                <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+62 345 67890</small>
                 <div class="ms-auto d-flex align-items-center">
                     <div class="ms-3 d-flex">
                         <a class="btn btn-sm-square btn-light text-success rounded-circle ms-2" href=""><i
@@ -124,8 +124,8 @@
                         </div>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="" class="btn btn-success rounded-pill py-2 px-3">Sign in</a>
-                        <a href="" class="btn btn-outline-success rounded-pill py-2 px-3">Register</a>
+                        <a href="/dashboardadmin" class="btn btn-success rounded-pill py-2 px-3">Sign in</a>
+                        <a href="/dashboardadmin" class="btn btn-outline-success rounded-pill py-2 px-3">Register</a>
                     </div>
                 </div>
             </nav>
