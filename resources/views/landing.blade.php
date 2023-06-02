@@ -187,7 +187,7 @@
 
 
    <!-- Service Start -->
-   <div class="container-xxl py-5">
+   <div class="container-fluid py-5">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <p class="fs-5 fw-medium text-success">BENEFITS</p>
@@ -247,7 +247,7 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl about my-5">
+    <div class="container-fluid about my-5">
         <div class="container">
             <div class="row g-0">
                 <div class="col-lg-6">
@@ -307,7 +307,7 @@
 
 
     <!-- Project Start -->
-    <div class="container-xxl pt-5">
+    <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
@@ -381,7 +381,7 @@
 
 
     <!-- Quote Start -->
-    <div class="container-xxl py-5">
+    <div class="container-fluid py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -449,7 +449,7 @@
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <div class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Our Team</p>
@@ -458,7 +458,7 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid mb-4" src="{{ asset('tempalte/asset//img/team-1.jpg') }}" alt="">
                         <h5>Alex Robin</h5>
                         <span class="text-primary">Founder & CEO</span>
                         <ul class="team-social">
@@ -471,7 +471,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid mb-4" src="{{ asset('tempalte/asset//img/team-2.jpg') }}" alt="">
                         <h5>Adam Crew</h5>
                         <span class="text-primary">Co Founder</span>
                         <ul class="team-social">
@@ -484,7 +484,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-3.jpg" alt="">
+                        <img class="img-fluid mb-4" src="{{ asset('tempalte/asset//img/team-3.jpg') }}" alt="">
                         <h5>Boris Johnson</h5>
                         <span class="text-primary">Executive Manager</span>
                         <ul class="team-social">
@@ -497,7 +497,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item rounded overflow-hidden pb-4">
-                        <img class="img-fluid mb-4" src="img/team-4.jpg" alt="">
+                        <img class="img-fluid mb-4" src="{{ asset('tempalte/asset//img/team-4.jpg') }}" alt="">
                         <h5>Robert Jordan</h5>
                         <span class="text-primary">Digital Marketer</span>
                         <ul class="team-social">
@@ -515,8 +515,8 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl pt-5">
-        <div class="container">
+    <div class="container-fluid pt-5">
+        
             <div class="text-center text-md-start pb-5 pb-md-0 wow fadeInUp" data-wow-delay="0.1s"
                 style="max-width: 500px;">
                 <p class="fs-5 fw-medium text-primary">Testimonial</p>
@@ -524,28 +524,28 @@
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-1.jpg" alt="">
+                    <img class="mb-4" src="{{ asset('template/asset/img/testimonial-1.jpg') }}" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
                     <span class="text-primary">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-2.jpg" alt="">
+                    <img class="mb-4" src="{{ asset('template/asset/img/testimonial-2.jpg') }}" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
                     <span class="text-primary">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-3.jpg" alt="">
+                    <img class="mb-4" src="{{ asset('template/asset/img/testimonial-3.jpg') }}" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
                     <span class="text-primary">Profession</span>
                 </div>
                 <div class="testimonial-item rounded p-4 p-lg-5 mb-5">
-                    <img class="mb-4" src="img/testimonial-4.jpg" alt="">
+                    <img class="mb-4" src="{{ asset('template/asset/img/testimonial-4.jpg') }}" alt="">
                     <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et
                         sit, sed stet lorem sit clita duo justo</p>
                     <h5>Client Name</h5>
@@ -615,12 +615,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium text-light" href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="fw-medium text-light" href="#">Gaptech</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-medium text-light" href="https://htmlcodex.com">HTML Codex</a>
-                    Distributed By <a class="fw-medium text-light" href="https://themewagon.com">ThemeWagon</a>
+                    Designed By <a class="fw-medium text-light" href="https://htmlcodex.com">RAM+</a>
+                    Distributed By <a class="fw-medium text-light" href="https://themewagon.com">Gaptech Solution</a>
                 </div>
             </div>
         </div>
