@@ -74,7 +74,7 @@ class DatanasabahController extends Controller
         $namafile = $data->getClientOriginalName();
         $data->move('DatanasabahNew', $namafile);
 
-        Excel::import(new DatanasabahImport, public_path('/DatanasabahNew/' . $namafile));
+        Excel::import(new DatanasabahImport, public_path('/DatanasabahNew' . $namafile));
         return redirect()->back();
     }
 

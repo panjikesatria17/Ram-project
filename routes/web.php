@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DatanasabahController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,8 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/signin', [DatanasabahController::class, 'signin'])->name('signin');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
 
 Route::get('/dashboardadmin', [DatanasabahController::class, 'dashboardadmin'])->name('dashboardadmin');
 Route::get('/user', [DatanasabahController::class, 'user'])->name('user');
